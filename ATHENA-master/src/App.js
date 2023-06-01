@@ -56,13 +56,13 @@ function App() {
   if (user && canEnter) {
     return (
       <Router>
-        <button
+        {/* <button
           onClick={() => {
             app.auth().signOut();
           }}
         >
           Logout
-        </button>
+        </button> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/project/:id" component={Project} />

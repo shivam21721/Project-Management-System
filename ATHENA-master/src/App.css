@@ -34,10 +34,17 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: pink;
+  background: #3F72AF;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(226, 149, 162);
+}
+
+#smartsupp-widget-container{
+  background-color: #DBE2EF;
+}
+.flex{
+  background-color: #DBE2EF !important; 
 }

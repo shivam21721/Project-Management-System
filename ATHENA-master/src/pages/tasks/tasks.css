@@ -7,7 +7,7 @@
   flex: 0.3;
   display: flex;
   flex-direction: column;
-  background-color: #f2d184;
+  background-color: #DBE2EF;
   padding: 1rem;
 }
 .task__right__container {
@@ -47,20 +47,32 @@
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
-
+  justify-content: center;
 }
 
 .taskCard{
-  
   margin: 10px;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 170px;
   border-radius: 8px;
-  border: 4px solid pink;
+  background-color: #DBE2EF;
 }
 .task-title{
-  background-color: #f2d184;
+  background-color:#112D4E;
   text-align: center;
-  color: #866118;
+  color: white;
   padding: 10px;
+}
+.taskcardInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.allTask{
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #112D4E;
 }

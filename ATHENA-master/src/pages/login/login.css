@@ -5,7 +5,7 @@
 }
 .left__container {
   flex: 0.3;
-  background-color: #f2d184;
+  background-color: #DBE2EF;
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +17,7 @@ header {
 }
 .title {
   font-family: "Kaushan Script", cursive;
-  color: #866118;
+  color: #112D4E;
   margin-bottom: 1rem;
   font-size: 2rem;
   position: relative;
@@ -29,7 +29,7 @@ header {
   position: absolute;
   height: 0.2rem;
   width: 100%;
-  background-color: #866118;
+  background-color: #112D4E;
   left: 0;
   bottom: 0;
   transform: scaleX(0);
@@ -41,7 +41,7 @@ header {
   transform-origin: right;
 }
 .text {
-  color: #866118;
+  color: #112D4E;
   line-height: 2.5rem;
   font-size: 2rem;
   position: relative;
@@ -80,7 +80,7 @@ header {
 }
 .login__box {
   width: 40%;
-  border: 2px solid pink;
+  border: 2px solid #3F72AF;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 0.7rem;
   display: flex;
@@ -92,7 +92,7 @@ header {
 }
 
 .header {
-  color: #866118;
+  color: #112D4E;
   position: relative;
   font-size: 1.3rem !important;
   margin-bottom: 2rem;
@@ -116,10 +116,10 @@ form {
   transition: 0.3s ease-in-out;
 }
 .input:focus {
-  border-color: pink;
+  border-color: #3F72AF;
 }
 .input:hover {
-  border-color: pink;
+  border-color: #3F72AF;
 }
 ::placeholder {
   color: #000;
@@ -137,7 +137,7 @@ label {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #866118;
+  color: #112D4E;
 }
 @media only screen and (max-width: 991px) {
   .left__container {
@@ -236,7 +236,7 @@ label {
 }
 .not__registered {
   margin-top: 0.5rem;
-  color: #866118;
+  color: #112D4E;
 }
 .not__registered a {
   margin-left: 0.7rem;
@@ -246,7 +246,7 @@ label {
   min-height: 3rem;
   padding: 0.7rem 2.5rem;
   color: #fff;
-  background-color: pink;
+  background-color: #3F72AF;
   font-size: 1.1rem;
   border-radius: 0.5rem;
   outline: 0;
@@ -312,7 +312,7 @@ label {
   height: 2px;
   width: 30%;
   position: relative;
-  background-color: pink;
+  background-color: #3F72AF;
 }
 .or p {
   font-size: 1.5rem;

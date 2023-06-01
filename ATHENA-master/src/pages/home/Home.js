@@ -110,7 +110,7 @@ function Home(props) {
             <input
               type="text"
               value={newProject}
-              placeholder="NEW PROJECT"
+              placeholder="CREATE NEW PROJECT"
               onChange={(e) => {
                 setNewProject(e.target.value);
               }}
@@ -120,7 +120,7 @@ function Home(props) {
           <div className="button">
             <CgAddR
               size="3rem"
-              color="#866118"
+              color="#112D4E"
               onClick={createNewProject}
               style={{ cursor: "pointer" }}
               className="add"
@@ -143,7 +143,7 @@ function Home(props) {
             </label>
           </div>
           
-          <h2>{userDetails.name}</h2>
+          <h2>{userDetails.name}</h2><br/>
         </div>
         <div className="joined">
           <div className="emailbox">
@@ -254,18 +254,19 @@ function Home(props) {
           </button>
         </div>
         <div className="allprojects">
+            <h1 className="home-title">YOUR PROJECTS</h1>
           {allProjects.map((item) => {
             return (
               <Link key={item.id} to={`/project/${item.id}`} className="links">
                 <div className="singleProject">
-                  <h3>{item.name}</h3>
+                  <h3 className="project-name">{item.name}</h3>
                   <div className="owner">
                     <h3>Owner:</h3>
                     <h3>{item.owner}</h3>
                   </div>
                   <div className="task__deatils">
-                    <h3>Total : {item.totalTasks}</h3>
-                    <h3>Completed : {item.completedTasks} </h3>
+                    <h3>Total Tasks : {item.totalTasks}</h3>
+                    {/* <h3>Completed : {item.completedTasks} </h3> */}
                   </div>
                 </div>
               </Link>

@@ -11,6 +11,12 @@
 .projects .create {
   justify-content: center;
 }
+.project-detail{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -300px;
+}
 .allProjects {
   display: flex;
   flex-direction: column;
@@ -25,7 +31,7 @@
   justify-content: center;
   align-items: center;
   height: 2rem;
-  color: #866118;
+  color: #112D4E;
   background-color: #fff;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -36,49 +42,66 @@
   transform: scale(1.06);
 }
 #active {
-  background-color: #866118;
+  background-color: #112D4E;
   color: #fff;
 }
 .projects .right__container {
   position: relative;
 }
-.projects .allprojects {
+/* .projects .allprojects {
   display: flex;
-}
+} */
 .details {
   flex: 1;
 }
 .team {
   flex: 1;
+  margin-top: 100px;
   text-align: center;
   max-height: 100%;
   overflow-y: auto;
-  color: #866118;
+  color: #112D4E;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .team div {
   padding: 0.5rem;
-  border: 1px solid pink;
+  border: 1px solid #3F72AF;
   border-radius: 0.3rem;
   margin-top: 0.5rem;
   width: 80%;
 }
-.req {
-  margin-top: 2rem;
+.team section{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 .mobile {
   display: none;
 }
 .teamss {
   padding: 0.5rem;
-  border: 1px solid pink;
+  border: 1px solid #3F72AF;
   border-radius: 0.3rem;
   margin-top: 0.5rem;
   width: 80%;
   text-align: center;
+}
+
+.projectName{
+  margin-top: 100px;
+  width: 100%;
+  color: #112D4E;
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 @media (max-width: 991px) {
   .linksss {
@@ -141,3 +164,4 @@
     font-size: 0.8rem;
   }
 }
+

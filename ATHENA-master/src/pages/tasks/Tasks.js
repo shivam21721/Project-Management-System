@@ -22,6 +22,7 @@ function Tasks(props) {
   const [currentTask, setCurrentTask] = useState("");
   const [time, setTime] = useState(0);
   const [sec, setSec] = useState(0);
+  const [assignee, setAssignee] = useState("");
   useEffect(async () => {
     const currentProject = allProjects.find(
       (item) => item.id === props.match.params.id
@@ -42,7 +43,7 @@ function Tasks(props) {
             userArr.push(item.data());
           });
           console.log(userArr);
-          setAllUsers(userArr);
+          // setAllUsers(userArr);
           setLoading(false);
         });
     });
@@ -63,12 +64,15 @@ function Tasks(props) {
     try {
       setTask("");
       setDeadline(new Date());
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      const formattedDate = date.toLocaleDateString('en-US', options);
+      console.log(formattedDate);
       await taskRef.doc(`task-${allTasks.length + 1}`).set({
         title: task,
         taskCreater: userDetails.email,
-        createdAt: fieldValue.serverTimestamp(),
-        deadline: date,
-        assignedTo: "",
+        createdAt: new Date(),
+        deadline: formattedDate.toString(),
+        assignedTo: assignee,
         priority: 0,
         taskId: `task-${allTasks.length + 1}`,
         timeGiven: 0,
@@ -129,6 +133,7 @@ function Tasks(props) {
               list="users"
               className="input"
               placeholder="Assignee"
+              onChange={(e) => setAssignee(e.target.value)}
             />
             <datalist id="users">
               {project.team.map((item) => (
@@ -149,16 +154,23 @@ function Tasks(props) {
             </div>
             {/* {`${Math.floor(time / 3600)} : ${Math.floor(time / 60)} : ${sec}`} */}
             <div className="task__cont">
+            <h1 className="allTask" >All Tasks</h1>
               {allTasks.map((item, pos) => {
                 return (
                   <div
                     className="taskCard"
                     key={item.taskId}
                   >
-                  <div>
+                  {/* <div> */}
                     <h1 className="task-title" >{item.title}</h1>
+                    <div className="taskcardInfo">
+                    <h4>Assigned To : {item.assignedTo}</h4><br/>
+                    <h4>Assigned By : {item.taskCreater}</h4><br/>
+                    <h4>Due By : {item.deadline}</h4>
+                    </div>
+                    {/* {item.deadline.toString()} */}
                     <h3>{item.completed}</h3>
-                  </div>
+                  {/* </div> */}
                     
                     {/* {tracking ? (
                       pos === position ? (

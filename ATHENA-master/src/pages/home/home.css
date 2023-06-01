@@ -11,19 +11,21 @@
 .create {
   display: flex;
   align-items: center;
+  margin: auto;
+  width: 400px;
 }
 ::-webkit-input-placeholder {
   /* Edge */
-  color: #866118;
+  color: #112D4E;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #866118;
+  color: #112D4E;
 }
 
 ::placeholder {
-  color: #866118;
+  color: #112D4E;
 }
 .create .button {
   flex: 0.3;
@@ -54,7 +56,7 @@
   left: 0%;
   width: 100%;
   height: 3px;
-  background-color: #866118;
+  background-color: #112D4E;
   transform: scaleX(0);
   transition: 0.3s ease-in-out;
 }
@@ -67,17 +69,24 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  
 }
 
 .profile-container{
-  background-color: pink;
-  padding: 30px 10;
-  width: auto;
+  padding: 30px 5px;
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  border: 4px solid #112D4E;
 }
 .image {
   height: fit-content;
   width: fit-content;
   position: relative;
+}
+.image img{
+  border-radius: 50%;
 }
 #file {
   display: none;
@@ -90,7 +99,7 @@
   background-color: rgba(255, 255, 255, 1);
   top: 0;
   left: 0;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   transform: scale(0);
   transform-origin: center;
   transition: 0.3s ease-in-out;
@@ -106,7 +115,7 @@
   width: 100%;
   max-height: 10rem;
   max-width: 10rem;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
 }
 .joined {
@@ -136,7 +145,7 @@ a {
 .headerhome {
   height: 15vh;
   width: 100%;
-  /* background-color: #f2d184; */
+  /* background-color: #DBE2EF; */
   position: absolute;
   top: 0;
   display: flex;
@@ -189,7 +198,7 @@ a {
   max-height: 50rem;
   overflow-y: auto;
   width: 15rem;
-  background-color: #f2d184;
+  background-color: #DBE2EF;
   z-index: 1;
   right: 100%;
   top: 100%;
@@ -224,9 +233,21 @@ a {
 .singleRequest {
   display: flex;
   flex-direction: column;
-  border: 1px solid pink;
+  border: 1px solid #3F72AF;
   padding: 1rem;
   gap: 0.5rem;
+}
+.project-name{
+  background-color: #DBE2EF;
+  text-align: center;
+  padding: 5px 0px;
+  margin-bottom: 5px;
+}
+.home-title{
+  width: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #112D4E;
 }
 .allprojects {
   /* height: calc((100% - 15vh) - 5vh); */
@@ -246,17 +267,21 @@ a {
   flex-wrap: wrap;
   justify-content: center; */
   grid-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .singleProject {
   padding: 1rem;
   width: 100%;
+  width: 400px;
   /* background-color: red; */
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-out;
   margin-bottom: 2rem;
-  color: #866118;
+  color: #112D4E;
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
@@ -339,3 +364,4 @@ a {
     padding: 0.4rem 1.5rem !important;
   }
 }
+

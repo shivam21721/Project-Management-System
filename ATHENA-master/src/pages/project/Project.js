@@ -106,7 +106,7 @@ function Project(props) {
               <div className="button">
                 <CgAddR
                   size="3rem"
-                  color="#866118"
+                  color="#112D4E"
                   onClick={addNewPartener}
                   style={{ cursor: "pointer" }}
                   className="add"
@@ -155,7 +155,7 @@ function Project(props) {
             </div>
             <div className="mobile">
               <h2>{singleProject.name}</h2>
-              <PieChart
+              {/* <PieChart
                 className="pie"
                 data={[
                   {
@@ -175,7 +175,7 @@ function Project(props) {
                     color: "#C13C37",
                   },
                 ]}
-              />
+              /> */}
               <h2>TEAM</h2>
               {singleProject.team.map((item, pos) => {
                 return (
@@ -193,10 +193,10 @@ function Project(props) {
                 );
               })}
             </div>
-            <div className="allprojects">
+            <div className="project-detail">
               <div className="details">
-                <h2>{singleProject.name}</h2>
-                <PieChart
+                <h2 className="projectName">{singleProject.name}</h2>
+                {/* <PieChart
                   data={[
                     {
                       title: "Completed",
@@ -215,9 +215,10 @@ function Project(props) {
                       color: "#C13C37",
                     },
                   ]}
-                />
+                /> */}
               </div>
               <div className="team">
+                <section>
                 <h2>TEAM</h2>
                 {singleProject.team.map((item, pos) => {
                   return (
@@ -226,6 +227,8 @@ function Project(props) {
                     </div>
                   );
                 })}
+                </section>
+                <section>
                 <h2 className="req">Requested</h2>
                 {singleProject.requestedUsers.map((item, pos) => {
                   return (
@@ -234,6 +237,7 @@ function Project(props) {
                     </div>
                   );
                 })}
+                </section>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 function Loading() {
   return (
     <LoadingArea>
-      <HashLoader color={"#ea4c89"} loading={true} css={override} size={150} />
+      <HashLoader color={"#112D4E"} loading={true} css={override} size={150} />
     </LoadingArea>
   );
 }
@@ -15,11 +15,11 @@ const LoadingArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2d184;
+  background-color: #DBE2EF;
 `;
 const override = css`
   display: block;
   margin: 0 auto;
-  border-color: pink;
+  border-color: #3F72AF;
 `;
 export default Loading;
